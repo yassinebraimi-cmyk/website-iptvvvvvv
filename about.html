@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="referrer" content="no-referrer">
+  <title>About Us | AETHERIA IPTV Infrastructure & SLA</title>
+  <meta name="description" content="Discover AETHERIA IPTV's global edge network architecture, 99.99% server SLA, and low-latency AntiFreeze 9.0 streaming technology.">
+  
+  <!-- Favicon & Icons -->
+  <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg">
+  
+  <!-- Web Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@400;600;700;800;900&display=swap">
+  
+  <!-- Primary & Fallback Stylesheets -->
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Production Deployment Path Resolution Script -->
+  <script>
+    (function() {
+      function loadFallbackStyles() {
+        var hasCSS = false;
+        var sheets = document.styleSheets;
+        for (var i = 0; i < sheets.length; i++) {
+          try {
+            if (sheets[i].href && sheets[i].href.indexOf('main.css') !== -1) {
+              hasCSS = true;
+              break;
+            }
+          } catch(e) {}
+        }
+        if (!hasCSS) {
+          ['assets/css/main.css', 'css/main.css', 'main.css', 'style.css'].forEach(function(path) {
+            var link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.href = path;
+            document.head.appendChild(link);
+          });
+        }
+      }
+      window.addEventListener('DOMContentLoaded', loadFallbackStyles);
+    })();
+  </script>
+</head>
+<body>
+
+  <div class="ambient-blob ambient-blob-purple"></div>
+  <div class="ambient-blob ambient-blob-blue"></div>
+  <canvas id="ambient-canvas"></canvas>
+  <div class="cursor-glow"></div>
+
+  <!-- Shared Header -->
+  <header class="header">
+    <div class="container">
+      <div class="nav-wrapper">
+        <a href="index.html" class="logo">
+          <div class="logo-mark">
+            <svg viewBox="0 0 24 24"><path d="M21 3H3c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h5v2h8v-2h5c1.1 0 1.99-.9 1.99-2L23 5c0-1.1-.9-2-2-2zm0 14H3V5h18v12z"/></svg>
+          </div>
+          <span>AETHERIA<span class="gradient-text">IPTV</span></span>
+        </a>
+        <nav class="nav-links">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="pricing.html" class="nav-link">Pricing</a>
+          <a href="about.html" class="nav-link active">About</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+        </nav>
+        <div class="nav-actions">
+          <a href="pricing.html" class="btn btn-primary btn-glow">Get Started</a>
+          <button class="mobile-toggle" aria-label="Toggle Mobile Menu">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-overlay"></div>
+  <div class="mobile-menu">
+    <a href="index.html" class="nav-link">Home</a>
+    <a href="pricing.html" class="nav-link">Pricing</a>
+    <a href="about.html" class="nav-link active">About</a>
+    <a href="contact.html" class="nav-link">Contact</a>
+    <a href="pricing.html" class="btn btn-primary btn-glow" style="margin-top: 20px;">Get Started</a>
+  </div>
+
+  <main style="padding-top: 140px;">
+    <!-- About Hero Header -->
+    <section class="section text-center">
+      <div class="container">
+        <div class="section-tag">ENGINEERING EXCELLENCE</div>
+        <h1 class="hero-title" style="font-size: 3rem;">REDEFINING THE FUTURE OF <br><span class="gradient-text">DIGITAL ENTERTAINMENT</span></h1>
+        <p class="hero-subtitle" style="margin: 20px auto 0; max-width: 760px;">Founded in 2021 by broadcast engineers and distribution architects, Aetheria IPTV was engineered with one goal: deliver buffer-free 4K/8K stream delivery worldwide.</p>
+      </div>
+    </section>
+
+    <!-- Core Philosophy Cards -->
+    <section class="section" style="background: var(--bg-secondary);">
+      <div class="container">
+        <div class="why-grid">
+          <div class="why-card">
+            <div class="why-icon-box"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg></div>
+            <h3 class="why-title">Low-Latency Edge Architecture</h3>
+            <p class="why-desc">We operate 20+ dedicated edge caching nodes across Frankfurt, London, Virginia, Tokyo, and Singapore to ensure video packets reach you under 25ms.</p>
+          </div>
+
+          <div class="why-card">
+            <div class="why-icon-box"><svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg></div>
+            <h3 class="why-title">AntiFreeze 9.0 Protocol</h3>
+            <p class="why-desc">Our proprietary network engine dynamically routes stream frames across redundant fiber pipelines during major UEFA, NFL, and UFC peak traffic events.</p>
+          </div>
+
+          <div class="why-card">
+            <div class="why-icon-box"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></div>
+            <h3 class="why-title">24/7 Concierge Service</h3>
+            <p class="why-desc">Our support team consists of real streaming specialists ready round-the-clock via WhatsApp and VIP tickets to configure your MAG, Firestick, or Tivimate app.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Company Stats -->
+    <section class="section">
+      <div class="container">
+        <div class="hero-stats" style="margin-top: 0; background: var(--card-bg); padding: 48px; border-radius: var(--radius-xl); border: 1px solid var(--glass-border);">
+          <div class="stat-item">
+            <h3 data-counter="99.99" data-suffix="%">99.99%</h3>
+            <p>Uptime SLA</p>
+          </div>
+          <div class="stat-item">
+            <h3 data-counter="50000" data-suffix="+">50,000+</h3>
+            <p>Happy Subscribers</p>
+          </div>
+          <div class="stat-item">
+            <h3 data-counter="15000" data-suffix="+">15,000+</h3>
+            <p>Live Channels</p>
+          </div>
+          <div class="stat-item">
+            <h3 data-counter="60000" data-suffix="+">60,000+</h3>
+            <p>4K VOD Titles</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Timeline Milestone Grid -->
+    <section class="section" style="background: var(--bg-secondary);">
+      <div class="container">
+        <div class="text-center reveal">
+          <div class="section-tag">OUR JOURNEY</div>
+          <h2 class="section-title">MILESTONES OF <span class="gradient-text">INNOVATION</span></h2>
+        </div>
+
+        <div class="why-grid reveal" style="margin-top: 48px;">
+          <div class="why-card">
+            <span class="badge-pill" style="margin-bottom: 12px;">Q1 2021</span>
+            <h3 class="why-title">Platform Launch</h3>
+            <p class="why-desc">Established initial edge servers in Frankfurt and London serving 1,000 beta subscribers with M3U and Xtream Codes API.</p>
+          </div>
+
+          <div class="why-card">
+            <span class="badge-pill" style="margin-bottom: 12px;">Q3 2023</span>
+            <h3 class="why-title">AntiFreeze 9.0 Upgrade</h3>
+            <p class="why-desc">Engineered AntiFreeze 9.0 packet recovery layer, eliminating buffer slowdowns during World Cup and Champions League matches.</p>
+          </div>
+
+          <div class="why-card">
+            <span class="badge-pill" style="margin-bottom: 12px;">2026 & Beyond</span>
+            <h3 class="why-title">8K Live Infrastructure</h3>
+            <p class="why-desc">Expanded global CDN cluster to 20+ edge centers with native 8K 60 FPS live sports broadcasting capabilities.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Shared Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <div class="logo-mark">
+              <svg viewBox="0 0 24 24"><path d="M21 3H3c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h5v2h8v-2h5c1.1 0 1.99-.9 1.99-2L23 5c0-1.1-.9-2-2-2zm0 14H3V5h18v12z"/></svg>
+            </div>
+            <span>AETHERIA<span class="gradient-text">IPTV</span></span>
+          </a>
+          <p>The premier dark luxury IPTV platform providing 15,000+ Live TV Channels and 60,000+ VOD movies worldwide.</p>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Quick Links</h4>
+          <div class="footer-links">
+            <a href="index.html" class="footer-link">Home</a>
+            <a href="pricing.html" class="footer-link">Pricing</a>
+            <a href="about.html" class="footer-link">About</a>
+            <a href="contact.html" class="footer-link">Contact</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Legal & Policies</h4>
+          <div class="footer-links">
+            <a href="privacy.html" class="footer-link">Privacy Policy</a>
+            <a href="terms.html" class="footer-link">Terms of Service</a>
+            <a href="refund.html" class="footer-link">Return & Refund</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Subscription Plans</h4>
+          <div class="footer-links">
+            <a href="contact.html?plan=1-Month" class="footer-link">1 Month ($14.99)</a>
+            <a href="contact.html?plan=3-Months" class="footer-link">3 Months ($34.99)</a>
+            <a href="contact.html?plan=6-Months" class="footer-link">6 Months ($59.99)</a>
+            <a href="contact.html?plan=12-Months" class="footer-link">12 Months ($89.99)</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 AETHERIA IPTV. All rights reserved.</p>
+        <div class="status-badge">
+          <div class="status-dot"></div>
+          All 20+ Global Edge Clusters Operational (99.99%)
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="config.js"></script>
+  <script src="assets/js/artwork-data.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/tmdb-engine.js"></script>
+  <script src="main.js"></script>
+  <script src="tmdb-engine.js"></script>
+</body>
+</html>
