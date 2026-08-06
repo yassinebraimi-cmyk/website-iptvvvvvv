@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="referrer" content="no-referrer">
+  <title>Pricing Plans | AETHERIA IPTV VIP Subscriptions</title>
+  <meta name="description" content="Choose your IPTV plan: 1 Month ($14.99), 3 Months ($34.99), 6 Months ($59.99), or 12 Months VIP ($89.99). Instant M3U & Xtream Codes setup.">
+  
+  <!-- Favicon & Icons -->
+  <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg">
+  
+  <!-- Web Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@400;600;700;800;900&display=swap">
+  
+  <!-- Primary & Fallback Stylesheets -->
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Production Deployment Path Resolution Script -->
+  <script>
+    (function() {
+      function loadFallbackStyles() {
+        var hasCSS = false;
+        var sheets = document.styleSheets;
+        for (var i = 0; i < sheets.length; i++) {
+          try {
+            if (sheets[i].href && sheets[i].href.indexOf('main.css') !== -1) {
+              hasCSS = true;
+              break;
+            }
+          } catch(e) {}
+        }
+        if (!hasCSS) {
+          ['assets/css/main.css', 'css/main.css', 'main.css', 'style.css'].forEach(function(path) {
+            var link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.href = path;
+            document.head.appendChild(link);
+          });
+        }
+      }
+      window.addEventListener('DOMContentLoaded', loadFallbackStyles);
+    })();
+  </script>
+</head>
+<body>
+
+  <div class="ambient-blob ambient-blob-purple"></div>
+  <div class="ambient-blob ambient-blob-blue"></div>
+  <canvas id="ambient-canvas"></canvas>
+  <div class="cursor-glow"></div>
+
+  <!-- Shared Header -->
+  <header class="header">
+    <div class="container">
+      <div class="nav-wrapper">
+        <a href="index.html" class="logo">
+          <div class="logo-mark">
+            <svg viewBox="0 0 24 24"><path d="M21 3H3c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h5v2h8v-2h5c1.1 0 1.99-.9 1.99-2L23 5c0-1.1-.9-2-2-2zm0 14H3V5h18v12z"/></svg>
+          </div>
+          <span>AETHERIA<span class="gradient-text">IPTV</span></span>
+        </a>
+        <nav class="nav-links">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="pricing.html" class="nav-link active">Pricing</a>
+          <a href="about.html" class="nav-link">About</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+        </nav>
+        <div class="nav-actions">
+          <a href="pricing.html" class="btn btn-primary btn-glow">Get Started</a>
+          <button class="mobile-toggle" aria-label="Toggle Mobile Menu">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-overlay"></div>
+  <div class="mobile-menu">
+    <a href="index.html" class="nav-link">Home</a>
+    <a href="pricing.html" class="nav-link active">Pricing</a>
+    <a href="about.html" class="nav-link">About</a>
+    <a href="contact.html" class="nav-link">Contact</a>
+    <a href="pricing.html" class="btn btn-primary btn-glow" style="margin-top: 20px;">Get Started</a>
+  </div>
+
+  <main style="padding-top: 140px;">
+    <!-- Pricing Header -->
+    <section class="section text-center">
+      <div class="container">
+        <div class="section-tag">TRANSPARENT SUBSCRIPTION PLANS</div>
+        <h1 class="hero-title" style="font-size: 3rem;">CHOOSE YOUR <span class="gradient-text">VIP ACCESS PACKAGE</span></h1>
+        <p class="hero-subtitle" style="margin: 20px auto 0; max-width: 760px;">Every plan includes 15,000+ 4K Live Channels, 60,000+ VOD Movies, AntiFreeze 9.0 SLA, and instant M3U / Xtream Codes credentials.</p>
+        
+        <!-- Toggle Switch -->
+        <div class="pricing-toggle-wrapper" style="margin-top: 36px; display: inline-flex; align-items: center; gap: 14px; background: var(--card-bg); padding: 8px 20px; border-radius: var(--radius-full); border: 1px solid var(--glass-border);">
+          <span style="font-size: 0.9rem; font-weight: 700;">Monthly Billing</span>
+          <label class="switch" style="position: relative; display: inline-block; width: 48px; height: 26px;">
+            <input type="checkbox" id="billing-toggle" style="opacity: 0; width: 0; height: 0;">
+            <span class="slider" style="position: absolute; cursor: pointer; inset: 0; background: rgba(255,255,255,0.1); border-radius: 34px; transition: 0.4s;"></span>
+          </label>
+          <span style="font-size: 0.9rem; font-weight: 700; color: var(--accent-purple);">Annual VIP (Save 40%)</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Cards Grid -->
+    <section class="section">
+      <div class="container">
+        <div class="pricing-grid">
+          
+          <!-- Plan 1: 1 Month -->
+          <div class="pricing-card">
+            <h3 class="plan-name">1 Month Pass</h3>
+            <p style="color: var(--text-muted); font-size: 0.85rem; margin-top: 4px;">Trial Experience</p>
+            <div class="plan-price">$<span data-monthly-price="14.99" data-annual-price="14.99">14.99</span></div>
+            <p style="color: var(--text-muted); font-size: 0.8rem; margin-top: 4px;">Billed once for 30 days</p>
+
+            <div style="margin: 28px 0;">
+              <ul class="pricing-features">
+                <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> 15,000+ Live Channels 4K</li>
+                <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> 60,000+ VOD Movies & Series</li>
+                <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> 1 Connection Allowed</li>
+                <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> AntiFreeze 9.0 SLA</li>
+                <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Instant Email Activation</li>
+              </ul>
+            </div>
+
+            <a href="contact.html?plan=1-Month" class="btn btn-secondary" style="width: 100%;">Subscribe Now</a>
+          </div>
+
+          <!-- Plan 2: 3 Months -->
+          <div class="pricing-card">
+            <h3 class="plan-name">3 Months Pass</h3>
+            <p style="color: var(--text-muted); font-size: 0.85rem; margin-top: 4px;">Popular Choice</p>
+            <div class="plan-price">$<span data-monthly-price="34.99" data-annual-price="29.99">34.99</span></div>
+            <p style="color: var(--text-muted); font-size: 0.8rem; margin-top: 4px;">Equivalent to $11.66/mo</p>
+
+            <div style="margin: 28px 0;">
+              <ul class="pricing-features">
+                <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> 15,000+ Live Channels 4K</li>
+                <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> 60,000+ VOD Movies & Series</li>
+                <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> 2 Simultaneous Connections</li>
+                <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> AntiFreeze 9.0 SLA</li>
+                <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> 7-Day Money-Back SLA</li>
+              </ul>
+            </div>
+
+            <a href="contact.html?plan=3-Months" class="btn btn-secondary" style="width: 100%;">Subscribe Now</a>
+          </div>
+
+          <!-- Plan 3: 12 Months (POPULAR FEATURED) -->
+          <div class="pricing-card popular">
+            <div class="popular-badge">MOST POPULAR</div>
+            <h3 class="plan-name">12 Months VIP</h3>
+            <p style="color: var(--text-muted); font-size: 0.85rem; margin-top: 4px;">Best Value ($7.49/mo)</p>
+            <div class="plan-price">$<span data-monthly-price="89.99" data-annual-price="79.99">89.99</span></div>
+            <p style="color: var(--text-muted); font-size: 0.8rem; margin-top: 4px;">Billed annually • Save $90</p>
+
+            <div style="margin: 28px 0;">
+              <ul class="pricing-features">
+                <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> 15,000+ Live Channels 4K & 8K</li>
+                <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> 60,000+ VOD Daily Updates</li>
+                <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> 3 Simultaneous Connections</li>
+                <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> AntiFreeze 9.0 SLA Guarantee</li>
+                <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> 24/7 VIP Concierge & WhatsApp</li>
+              </ul>
+            </div>
+
+            <a href="contact.html?plan=12-Months" class="btn btn-primary btn-glow" style="width: 100%;">Subscribe Now</a>
+          </div>
+
+          <!-- Plan 4: 6 Months -->
+          <div class="pricing-card">
+            <h3 class="plan-name">6 Months Pass</h3>
+            <p style="color: var(--text-muted); font-size: 0.85rem; margin-top: 4px;">Semi-Annual Pass</p>
+            <div class="plan-price">$<span data-monthly-price="59.99" data-annual-price="49.99">59.99</span></div>
+            <p style="color: var(--text-muted); font-size: 0.8rem; margin-top: 4px;">Equivalent to $9.99/mo</p>
+
+            <div style="margin: 28px 0;">
+              <ul class="pricing-features">
+                <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> 15,000+ Live Channels 4K</li>
+                <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> 60,000+ VOD Movies & Series</li>
+                <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> 2 Simultaneous Connections</li>
+                <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> AntiFreeze 9.0 SLA</li>
+                <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Priority Setup Email</li>
+              </ul>
+            </div>
+
+            <a href="contact.html?plan=6-Months" class="btn btn-secondary" style="width: 100%;">Subscribe Now</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Plan Feature Matrix Table -->
+    <section class="section" style="background: var(--bg-secondary);">
+      <div class="container">
+        <div class="text-center reveal">
+          <div class="section-tag">DETAILED COMPARISON</div>
+          <h2 class="section-title">PLAN SPECIFICATION <span class="gradient-text">MATRIX</span></h2>
+        </div>
+
+        <div class="reveal" style="margin-top: 48px; overflow-x: auto;">
+          <table style="width: 100%; border-collapse: collapse; background: var(--card-bg); border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--glass-border);">
+            <thead>
+              <tr style="background: rgba(255,255,255,0.03); border-bottom: 1px solid var(--glass-border);">
+                <th style="padding: 18px 24px; text-align: left; font-size: 0.95rem;">Features & Credentials</th>
+                <th style="padding: 18px 24px; text-align: center;">1 Month</th>
+                <th style="padding: 18px 24px; text-align: center;">3 Months</th>
+                <th style="padding: 18px 24px; text-align: center;">6 Months</th>
+                <th style="padding: 18px 24px; text-align: center; color: var(--accent-purple);">12 Months VIP</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom: 1px solid rgba(255,255,255,0.04);">
+                <td style="padding: 16px 24px; font-weight: 600;">4K & 8K Ultra HD Streaming</td>
+                <td style="text-align: center; color: #10B981;">✓ 4K</td>
+                <td style="text-align: center; color: #10B981;">✓ 4K</td>
+                <td style="text-align: center; color: #10B981;">✓ 4K</td>
+                <td style="text-align: center; color: var(--accent-purple); font-weight: 800;">✓ 4K & 8K</td>
+              </tr>
+              <tr style="border-bottom: 1px solid rgba(255,255,255,0.04);">
+                <td style="padding: 16px 24px; font-weight: 600;">Xtream Codes API & M3U Playlist</td>
+                <td style="text-align: center; color: #10B981;">✓</td>
+                <td style="text-align: center; color: #10B981;">✓</td>
+                <td style="text-align: center; color: #10B981;">✓</td>
+                <td style="text-align: center; color: #10B981;">✓</td>
+              </tr>
+              <tr style="border-bottom: 1px solid rgba(255,255,255,0.04);">
+                <td style="padding: 16px 24px; font-weight: 600;">Simultaneous Screen Connections</td>
+                <td style="text-align: center;">1 Screen</td>
+                <td style="text-align: center;">2 Screens</td>
+                <td style="text-align: center;">2 Screens</td>
+                <td style="text-align: center; font-weight: 800; color: var(--accent-blue);">3 Screens</td>
+              </tr>
+              <tr style="border-bottom: 1px solid rgba(255,255,255,0.04);">
+                <td style="padding: 16px 24px; font-weight: 600;">AntiFreeze 9.0 Zero-Buffer SLA</td>
+                <td style="text-align: center; color: #10B981;">✓</td>
+                <td style="text-align: center; color: #10B981;">✓</td>
+                <td style="text-align: center; color: #10B981;">✓</td>
+                <td style="text-align: center; color: #10B981;">✓</td>
+              </tr>
+              <tr>
+                <td style="padding: 16px 24px; font-weight: 600;">WhatsApp & VIP Concierge Desk</td>
+                <td style="text-align: center; color: var(--text-muted);">-</td>
+                <td style="text-align: center; color: var(--text-muted);">-</td>
+                <td style="text-align: center; color: #10B981;">✓ Priority</td>
+                <td style="text-align: center; color: var(--accent-purple); font-weight: 800;">✓ 24/7 VIP</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Shared Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <div class="logo-mark">
+              <svg viewBox="0 0 24 24"><path d="M21 3H3c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h5v2h8v-2h5c1.1 0 1.99-.9 1.99-2L23 5c0-1.1-.9-2-2-2zm0 14H3V5h18v12z"/></svg>
+            </div>
+            <span>AETHERIA<span class="gradient-text">IPTV</span></span>
+          </a>
+          <p>The premier dark luxury IPTV platform providing 15,000+ Live TV Channels and 60,000+ VOD movies worldwide.</p>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Quick Links</h4>
+          <div class="footer-links">
+            <a href="index.html" class="footer-link">Home</a>
+            <a href="pricing.html" class="footer-link">Pricing</a>
+            <a href="about.html" class="footer-link">About</a>
+            <a href="contact.html" class="footer-link">Contact</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Legal & Policies</h4>
+          <div class="footer-links">
+            <a href="privacy.html" class="footer-link">Privacy Policy</a>
+            <a href="terms.html" class="footer-link">Terms of Service</a>
+            <a href="refund.html" class="footer-link">Return & Refund</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Subscription Plans</h4>
+          <div class="footer-links">
+            <a href="contact.html?plan=1-Month" class="footer-link">1 Month ($14.99)</a>
+            <a href="contact.html?plan=3-Months" class="footer-link">3 Months ($34.99)</a>
+            <a href="contact.html?plan=6-Months" class="footer-link">6 Months ($59.99)</a>
+            <a href="contact.html?plan=12-Months" class="footer-link">12 Months ($89.99)</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 AETHERIA IPTV. All rights reserved.</p>
+        <div class="status-badge">
+          <div class="status-dot"></div>
+          All 20+ Global Edge Clusters Operational (99.99%)
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="config.js"></script>
+  <script src="assets/js/artwork-data.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/tmdb-engine.js"></script>
+  <script src="main.js"></script>
+  <script src="tmdb-engine.js"></script>
+</body>
+</html>
