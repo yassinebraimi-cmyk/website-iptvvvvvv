@@ -1,0 +1,7 @@
+# Robots.txt for StreamFlix Multi-Page Platform
+# Static Website Stack SOP Compliant
+
+User-agent: *
+Allow: /
+
+Sitemap: https://streamflix.example.com/sitemap.xml
