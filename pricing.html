@@ -51,6 +51,7 @@
 </head>
 <body>
 
+  <!-- Ambient Blobs & Canvas -->
   <div class="ambient-blob ambient-blob-purple"></div>
   <div class="ambient-blob ambient-blob-blue"></div>
   <canvas id="ambient-canvas"></canvas>
@@ -92,45 +93,49 @@
     <a href="pricing.html" class="btn btn-primary btn-glow" style="margin-top: 20px;">Get Started</a>
   </div>
 
-  <main style="padding-top: 140px;">
+  <main style="padding-top: 140px; padding-bottom: 100px;">
     <!-- Pricing Header -->
     <section class="section text-center">
       <div class="container">
-        <div class="section-tag">TRANSPARENT SUBSCRIPTION PLANS</div>
-        <h1 class="hero-title" style="font-size: 3rem;">CHOOSE YOUR <span class="gradient-text">VIP ACCESS PACKAGE</span></h1>
-        <p class="hero-subtitle" style="margin: 20px auto 0; max-width: 760px;">Every plan includes 15,000+ 4K Live Channels, 60,000+ VOD Movies, AntiFreeze 9.0 SLA, and instant M3U / Xtream Codes credentials.</p>
-        
-        <!-- Toggle Switch -->
-        <div class="pricing-toggle-wrapper" style="margin-top: 36px; display: inline-flex; align-items: center; gap: 14px; background: var(--card-bg); padding: 8px 20px; border-radius: var(--radius-full); border: 1px solid var(--glass-border);">
-          <span style="font-size: 0.9rem; font-weight: 700;">Monthly Billing</span>
+        <div class="section-tag">PREMIUM VIP SUBSCRIPTION PACKAGES</div>
+        <h1 class="hero-title" style="font-size: 3.2rem;">SELECT YOUR <span class="gradient-text">STREAMING PLAN</span></h1>
+        <p class="hero-subtitle" style="margin: 20px auto 0; max-width: 760px;">Unlock 15,000+ 4K Live Channels, 60,000+ VOD Movies & Series, AntiFreeze 9.0 SLA, and instant automated credential setup.</p>
+
+        <!-- Toggle Billing Switch -->
+        <div class="pricing-toggle-wrapper" style="margin-top: 36px; display: inline-flex; align-items: center; gap: 14px; background: rgba(255,255,255,0.03); padding: 10px 24px; border-radius: var(--radius-full); border: 1px solid var(--glass-border); backdrop-filter: blur(12px);">
+          <span style="font-size: 0.9rem; font-weight: 700; color: var(--text-white);">Monthly Billing</span>
           <label class="switch" style="position: relative; display: inline-block; width: 48px; height: 26px;">
             <input type="checkbox" id="billing-toggle" style="opacity: 0; width: 0; height: 0;">
-            <span class="slider" style="position: absolute; cursor: pointer; inset: 0; background: rgba(255,255,255,0.1); border-radius: 34px; transition: 0.4s;"></span>
+            <span class="slider" style="position: absolute; cursor: pointer; inset: 0; background: rgba(255,255,255,0.12); border-radius: 34px; transition: 0.4s;"></span>
           </label>
-          <span style="font-size: 0.9rem; font-weight: 700; color: var(--accent-purple);">Annual VIP (Save 40%)</span>
+          <span style="font-size: 0.9rem; font-weight: 700; color: var(--accent-purple);">Annual VIP (Save up to 40%)</span>
         </div>
       </div>
     </section>
 
     <!-- Pricing Cards Grid -->
-    <section class="section">
+    <section class="section" style="padding-top: 0;">
       <div class="container">
         <div class="pricing-grid">
           
           <!-- Plan 1: 1 Month -->
           <div class="pricing-card">
-            <h3 class="plan-name">1 Month Pass</h3>
-            <p style="color: var(--text-muted); font-size: 0.85rem; margin-top: 4px;">Trial Experience</p>
-            <div class="plan-price">$<span data-monthly-price="14.99" data-annual-price="14.99">14.99</span></div>
-            <p style="color: var(--text-muted); font-size: 0.8rem; margin-top: 4px;">Billed once for 30 days</p>
+            <div>
+              <h3 class="plan-name">1 Month Pass</h3>
+              <p style="color: var(--text-muted); font-size: 0.85rem; margin-top: 4px;">Trial Experience</p>
+              
+              <div class="plan-price-box">
+                <div class="plan-price">$<span data-monthly-price="14.99" data-annual-price="14.99">14.99</span></div>
+                <span class="plan-period">/ month</span>
+              </div>
+              <p style="color: var(--text-muted); font-size: 0.8rem; margin-top: -16px; margin-bottom: 20px;">Billed once for 30 days</p>
 
-            <div style="margin: 28px 0;">
               <ul class="pricing-features">
-                <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> 15,000+ Live Channels 4K</li>
-                <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> 60,000+ VOD Movies & Series</li>
-                <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> 1 Connection Allowed</li>
-                <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> AntiFreeze 9.0 SLA</li>
-                <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Instant Email Activation</li>
+                <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg> 15,000+ Live Channels 4K</li>
+                <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg> 60,000+ VOD Movies & Series</li>
+                <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg> 1 Screen Connection</li>
+                <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg> AntiFreeze 9.0 SLA Tech</li>
+                <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg> Automated Setup Email</li>
               </ul>
             </div>
 
@@ -139,18 +144,22 @@
 
           <!-- Plan 2: 3 Months -->
           <div class="pricing-card">
-            <h3 class="plan-name">3 Months Pass</h3>
-            <p style="color: var(--text-muted); font-size: 0.85rem; margin-top: 4px;">Popular Choice</p>
-            <div class="plan-price">$<span data-monthly-price="34.99" data-annual-price="29.99">34.99</span></div>
-            <p style="color: var(--text-muted); font-size: 0.8rem; margin-top: 4px;">Equivalent to $11.66/mo</p>
+            <div>
+              <h3 class="plan-name">3 Months Pass</h3>
+              <p style="color: var(--text-muted); font-size: 0.85rem; margin-top: 4px;">Popular Choice</p>
+              
+              <div class="plan-price-box">
+                <div class="plan-price">$<span data-monthly-price="34.99" data-annual-price="29.99">34.99</span></div>
+                <span class="plan-period">/ 3 months</span>
+              </div>
+              <p style="color: var(--text-muted); font-size: 0.8rem; margin-top: -16px; margin-bottom: 20px;">Equivalent to $11.66/mo</p>
 
-            <div style="margin: 28px 0;">
               <ul class="pricing-features">
-                <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> 15,000+ Live Channels 4K</li>
-                <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> 60,000+ VOD Movies & Series</li>
-                <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> 2 Simultaneous Connections</li>
-                <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> AntiFreeze 9.0 SLA</li>
-                <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> 7-Day Money-Back SLA</li>
+                <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg> 15,000+ Live Channels 4K</li>
+                <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg> 60,000+ VOD Movies & Series</li>
+                <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg> 2 Simultaneous Screens</li>
+                <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg> AntiFreeze 9.0 SLA Tech</li>
+                <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg> 7-Day Money-Back SLA</li>
               </ul>
             </div>
 
@@ -160,18 +169,22 @@
           <!-- Plan 3: 12 Months (POPULAR FEATURED) -->
           <div class="pricing-card popular">
             <div class="popular-badge">MOST POPULAR</div>
-            <h3 class="plan-name">12 Months VIP</h3>
-            <p style="color: var(--text-muted); font-size: 0.85rem; margin-top: 4px;">Best Value ($7.49/mo)</p>
-            <div class="plan-price">$<span data-monthly-price="89.99" data-annual-price="79.99">89.99</span></div>
-            <p style="color: var(--text-muted); font-size: 0.8rem; margin-top: 4px;">Billed annually • Save $90</p>
+            <div>
+              <h3 class="plan-name">12 Months VIP</h3>
+              <p style="color: var(--text-muted); font-size: 0.85rem; margin-top: 4px;">Best Value Pass</p>
+              
+              <div class="plan-price-box">
+                <div class="plan-price">$<span data-monthly-price="89.99" data-annual-price="79.99">89.99</span></div>
+                <span class="plan-period">/ year</span>
+              </div>
+              <p style="color: var(--text-muted); font-size: 0.8rem; margin-top: -16px; margin-bottom: 20px;">Save $90 • Only $7.49/mo</p>
 
-            <div style="margin: 28px 0;">
               <ul class="pricing-features">
-                <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> 15,000+ Live Channels 4K & 8K</li>
-                <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> 60,000+ VOD Daily Updates</li>
-                <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> 3 Simultaneous Connections</li>
-                <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> AntiFreeze 9.0 SLA Guarantee</li>
-                <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> 24/7 VIP Concierge & WhatsApp</li>
+                <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg> 15,000+ Channels 4K & 8K</li>
+                <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg> 60,000+ VOD Daily Updates</li>
+                <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg> 3 Simultaneous Screens</li>
+                <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg> AntiFreeze 9.0 SLA Tech</li>
+                <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg> 24/7 VIP Concierge Support</li>
               </ul>
             </div>
 
@@ -180,18 +193,22 @@
 
           <!-- Plan 4: 6 Months -->
           <div class="pricing-card">
-            <h3 class="plan-name">6 Months Pass</h3>
-            <p style="color: var(--text-muted); font-size: 0.85rem; margin-top: 4px;">Semi-Annual Pass</p>
-            <div class="plan-price">$<span data-monthly-price="59.99" data-annual-price="49.99">59.99</span></div>
-            <p style="color: var(--text-muted); font-size: 0.8rem; margin-top: 4px;">Equivalent to $9.99/mo</p>
+            <div>
+              <h3 class="plan-name">6 Months Pass</h3>
+              <p style="color: var(--text-muted); font-size: 0.85rem; margin-top: 4px;">Semi-Annual Pass</p>
+              
+              <div class="plan-price-box">
+                <div class="plan-price">$<span data-monthly-price="59.99" data-annual-price="49.99">59.99</span></div>
+                <span class="plan-period">/ 6 months</span>
+              </div>
+              <p style="color: var(--text-muted); font-size: 0.8rem; margin-top: -16px; margin-bottom: 20px;">Equivalent to $9.99/mo</p>
 
-            <div style="margin: 28px 0;">
               <ul class="pricing-features">
-                <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> 15,000+ Live Channels 4K</li>
-                <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> 60,000+ VOD Movies & Series</li>
-                <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> 2 Simultaneous Connections</li>
-                <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> AntiFreeze 9.0 SLA</li>
-                <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Priority Setup Email</li>
+                <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg> 15,000+ Live Channels 4K</li>
+                <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg> 60,000+ VOD Movies & Series</li>
+                <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg> 2 Simultaneous Screens</li>
+                <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg> AntiFreeze 9.0 SLA Tech</li>
+                <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg> Priority Setup Support</li>
               </ul>
             </div>
 
@@ -199,67 +216,78 @@
           </div>
 
         </div>
-      </div>
-    </section>
 
-    <!-- Plan Feature Matrix Table -->
-    <section class="section" style="background: var(--bg-secondary);">
-      <div class="container">
-        <div class="text-center reveal">
-          <div class="section-tag">DETAILED COMPARISON</div>
-          <h2 class="section-title">PLAN SPECIFICATION <span class="gradient-text">MATRIX</span></h2>
-        </div>
+        <!-- Detailed Feature Matrix Comparison Table -->
+        <div class="pricing-matrix-wrapper reveal" style="margin-top: 80px;">
+          <div class="text-center" style="margin-bottom: 32px;">
+            <h3 style="font-size: 1.8rem; font-weight: 800; color: #FFF;">PLAN FEATURE COMPARISON</h3>
+            <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 6px;">Compare technical capabilities across all subscription tiers.</p>
+          </div>
 
-        <div class="reveal" style="margin-top: 48px; overflow-x: auto;">
-          <table style="width: 100%; border-collapse: collapse; background: var(--card-bg); border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--glass-border);">
+          <table class="matrix-table">
             <thead>
-              <tr style="background: rgba(255,255,255,0.03); border-bottom: 1px solid var(--glass-border);">
-                <th style="padding: 18px 24px; text-align: left; font-size: 0.95rem;">Features & Credentials</th>
-                <th style="padding: 18px 24px; text-align: center;">1 Month</th>
-                <th style="padding: 18px 24px; text-align: center;">3 Months</th>
-                <th style="padding: 18px 24px; text-align: center;">6 Months</th>
-                <th style="padding: 18px 24px; text-align: center; color: var(--accent-purple);">12 Months VIP</th>
+              <tr>
+                <th>Features & SLA</th>
+                <th>1 Month</th>
+                <th>3 Months</th>
+                <th>12 Months VIP</th>
+                <th>6 Months</th>
               </tr>
             </thead>
             <tbody>
-              <tr style="border-bottom: 1px solid rgba(255,255,255,0.04);">
-                <td style="padding: 16px 24px; font-weight: 600;">4K & 8K Ultra HD Streaming</td>
-                <td style="text-align: center; color: #10B981;">✓ 4K</td>
-                <td style="text-align: center; color: #10B981;">✓ 4K</td>
-                <td style="text-align: center; color: #10B981;">✓ 4K</td>
-                <td style="text-align: center; color: var(--accent-purple); font-weight: 800;">✓ 4K & 8K</td>
-              </tr>
-              <tr style="border-bottom: 1px solid rgba(255,255,255,0.04);">
-                <td style="padding: 16px 24px; font-weight: 600;">Xtream Codes API & M3U Playlist</td>
-                <td style="text-align: center; color: #10B981;">✓</td>
-                <td style="text-align: center; color: #10B981;">✓</td>
-                <td style="text-align: center; color: #10B981;">✓</td>
-                <td style="text-align: center; color: #10B981;">✓</td>
-              </tr>
-              <tr style="border-bottom: 1px solid rgba(255,255,255,0.04);">
-                <td style="padding: 16px 24px; font-weight: 600;">Simultaneous Screen Connections</td>
-                <td style="text-align: center;">1 Screen</td>
-                <td style="text-align: center;">2 Screens</td>
-                <td style="text-align: center;">2 Screens</td>
-                <td style="text-align: center; font-weight: 800; color: var(--accent-blue);">3 Screens</td>
-              </tr>
-              <tr style="border-bottom: 1px solid rgba(255,255,255,0.04);">
-                <td style="padding: 16px 24px; font-weight: 600;">AntiFreeze 9.0 Zero-Buffer SLA</td>
-                <td style="text-align: center; color: #10B981;">✓</td>
-                <td style="text-align: center; color: #10B981;">✓</td>
-                <td style="text-align: center; color: #10B981;">✓</td>
-                <td style="text-align: center; color: #10B981;">✓</td>
+              <tr>
+                <td>Live 4K & 8K Channels</td>
+                <td class="matrix-check">15,000+</td>
+                <td class="matrix-check">15,000+</td>
+                <td class="matrix-check" style="color: var(--accent-purple);">15,000+ (8K)</td>
+                <td class="matrix-check">15,000+</td>
               </tr>
               <tr>
-                <td style="padding: 16px 24px; font-weight: 600;">WhatsApp & VIP Concierge Desk</td>
-                <td style="text-align: center; color: var(--text-muted);">-</td>
-                <td style="text-align: center; color: var(--text-muted);">-</td>
-                <td style="text-align: center; color: #10B981;">✓ Priority</td>
-                <td style="text-align: center; color: var(--accent-purple); font-weight: 800;">✓ 24/7 VIP</td>
+                <td>VOD Movies & Series</td>
+                <td class="matrix-check">60,000+</td>
+                <td class="matrix-check">60,000+</td>
+                <td class="matrix-check">Daily Updates</td>
+                <td class="matrix-check">60,000+</td>
+              </tr>
+              <tr>
+                <td>Simultaneous Connections</td>
+                <td>1 Screen</td>
+                <td>2 Screens</td>
+                <td style="font-weight: 800; color: var(--accent-purple);">3 Screens</td>
+                <td>2 Screens</td>
+              </tr>
+              <tr>
+                <td>AntiFreeze 9.0 Engine</td>
+                <td class="matrix-check">✓</td>
+                <td class="matrix-check">✓</td>
+                <td class="matrix-check">✓</td>
+                <td class="matrix-check">✓</td>
+              </tr>
+              <tr>
+                <td>Catch-up & EPG Guide</td>
+                <td class="matrix-check">7 Days</td>
+                <td class="matrix-check">7 Days</td>
+                <td class="matrix-check">14 Days VIP</td>
+                <td class="matrix-check">7 Days</td>
+              </tr>
+              <tr>
+                <td>Money-Back SLA</td>
+                <td>—</td>
+                <td class="matrix-check">7 Days</td>
+                <td class="matrix-check">7 Days Full</td>
+                <td class="matrix-check">7 Days</td>
+              </tr>
+              <tr>
+                <td>VIP Support Level</td>
+                <td>Standard Email</td>
+                <td>Priority Email</td>
+                <td style="font-weight: 800; color: var(--accent-purple);">24/7 WhatsApp Desk</td>
+                <td>Priority Email</td>
               </tr>
             </tbody>
           </table>
         </div>
+
       </div>
     </section>
   </main>
