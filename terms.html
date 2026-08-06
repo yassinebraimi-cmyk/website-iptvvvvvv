@@ -74,10 +74,38 @@
         </nav>
         <div class="nav-actions">
           <a href="pricing.html" class="btn btn-primary btn-glow">Get Started</a>
+          <button class="mobile-toggle" aria-label="Toggle Mobile Menu">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+          </button>
         </div>
       </div>
     </div>
   </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-overlay"></div>
+  <aside class="mobile-menu" aria-label="Mobile Navigation">
+    <div>
+      <div class="mobile-menu-header">
+        <a href="index.html" class="logo">
+          <div class="logo-mark">
+            <svg viewBox="0 0 24 24"><path d="M21 3H3c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h5v2h8v-2h5c1.1 0 1.99-.9 1.99-2L23 5c0-1.1-.9-2-2-2zm0 14H3V5h18v12z"/></svg>
+          </div>
+          <span>AETHERIA<span class="gradient-text">IPTV</span></span>
+        </a>
+        <button class="mobile-close-btn" aria-label="Close Mobile Menu">&times;</button>
+      </div>
+      <nav class="mobile-menu-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="pricing.html" class="nav-link">Pricing</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+    </div>
+    <div style="padding-top: 20px; border-top: 1px solid rgba(255, 255, 255, 0.08);">
+      <a href="pricing.html" class="btn btn-primary btn-glow" style="width: 100%;">Get Started</a>
+    </div>
+  </aside>
 
   <main style="padding-top: 140px; padding-bottom: 80px;">
     <div class="container" style="max-width: 900px;">
