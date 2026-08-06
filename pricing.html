@@ -75,8 +75,8 @@
         </nav>
         <div class="nav-actions">
           <a href="pricing.html" class="btn btn-primary btn-glow">Get Started</a>
-          <button class="mobile-toggle" aria-label="Toggle Mobile Menu">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+          <button class="mobile-toggle" onclick="window.toggleMobileMenu && window.toggleMobileMenu(event)" aria-label="Toggle Mobile Menu">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" style="pointer-events: none;"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
           </button>
         </div>
       </div>
@@ -84,7 +84,7 @@
   </header>
 
   <!-- Mobile Drawer -->
-  <div class="mobile-overlay"></div>
+  <div class="mobile-overlay" onclick="window.closeMobileMenu && window.closeMobileMenu(event)"></div>
   <aside class="mobile-menu" aria-label="Mobile Navigation">
     <div>
       <div class="mobile-menu-header">
@@ -94,7 +94,7 @@
           </div>
           <span>AETHERIA<span class="gradient-text">IPTV</span></span>
         </a>
-        <button class="mobile-close-btn" aria-label="Close Mobile Menu">&times;</button>
+        <button class="mobile-close-btn" onclick="window.closeMobileMenu && window.closeMobileMenu(event)" aria-label="Close Mobile Menu">&times;</button>
       </div>
       <nav class="mobile-menu-links">
         <a href="index.html" class="nav-link">Home</a>
