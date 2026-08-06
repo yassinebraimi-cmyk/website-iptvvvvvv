@@ -1,0 +1,8 @@
+# System files
+.DS_Store
+Thumbs.db
+*.log
+
+# Subagent temp files
+.agents/
+.system_generated/
